@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css"/>
+  </head>
+  <body>
+    <div class="todoheader">
+      <div class="todo-container">
+        <div class="todo-nav">
+          <a href="#!" class="todo-burger">
+            <ion-icon name="menu-outline" size="large"></ion-icon>
+          </a>
+          <a href="#!" class="todo-add">
+            <ion-icon name="add-outline" size="large"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar">
+        <a href="./index.html" class="navbar-home">
+          <img src="./img/navbar-home.svg" alt="navbar-home">
+          <span>Главная</span>
+        </a>
+        <a href="#!" class="navbar-settings">
+          <img src="./img/navbar-settings.svg" alt="navbar-home">
+          <span>Настройки</span>
+        </a>
+        <a href="./app.html" class="navbar-home">
+          <img src="./img/navbar-task.svg" alt="navbar-home">
+          <span>Задачи</span>
+        </a>
+        <a href="./drag.html" class="navbar-home">
+          <img src="./img/navbar-drag.svg" alt="navbar-home">
+          <span>Доски</span>
+        </a>
+      </div>
+
+      <div class="settings">
+        <a class="settings__close">
+          <ion-icon name="close-outline" size="large"></ion-icon>
+        </a>
+        <h3 class="settings__title">
+          Настройки
+        </h3>
+        <h4 class="settings__text">
+          Темы
+        </h4>
+        <div class="settings__themes">
+          <div class="settings__theme">
+            <img src="./img/theme-black.svg" alt="theme-black">
+          </div>
+          <div class="settings__theme">
+            <img src="./img/theme-netr.svg" alt="theme-netr">
+          </div>
+        </div>
+      </div>
+
+      <div class="todomain">
+        <div class="todo-container-main">
+            <h2 class="todo-title">
+            </h2>
+            <div class="row">
+              <div class="col-header">Начать</div>
+              <div class="col-header">В процессе</div>
+              <div class="col-header">Готовы</div>
+            </div>
+            
+            <div class="row">
+              <div class="placeholder">
+                <a href="#!" class="todo-dask">
+                  <ion-icon name="add-outline"></ion-icon><span>Добавить доску</span></a>
+                <div class="item" draggable="true">
+                  <input type="text" placeholder="Введите доску">
+                  <div class="item-info">
+                    <a class="item-add" href="#!">Добавить</a>
+                    <a class="item-del" href="#!">Отмена</a>
+                  </div>
+                </div>
+              </div>
+              <div class="placeholder"></div>
+              <div class="placeholder"></div>
+            </div>
+        </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    
+
+    <script src="./drag.js"></script>
+  </body>
+</html>
