@@ -26,12 +26,13 @@ const navbarSettings = document.querySelector('.navbar-settings')
 const settingsThemes = document.querySelectorAll('.settings__theme')
 const todoHeader = document.querySelector('.todoheader')
 const settingsClose = document.querySelector('.settings__close')
-
+const todoModal = document.querySelector('.todo-modal')
 
 
 // Event Listener
 
 settingsThemes[0].addEventListener('click', () => {
+    modal.style.backgroundColor = '#000'
     todoHeader.classList.add('theme_black')
     navbar.classList.add('theme_black')
     document.body.style.backgroundColor = '#161616'
@@ -59,6 +60,8 @@ modalAdd.addEventListener('click', addTaskItem)
 todoBurger.addEventListener('click', moveNavbar)
 navbarSettings.addEventListener('click', showSettings)
 
+
+
 // Functions
 function closeModal() {
     modal.classList.add('hide_modal')
@@ -76,7 +79,7 @@ function addTaskItem() {
         modal.classList.add('hide_modal')
         let li = document.createElement('li')
         li.classList.add('todo-list-item')
-        li.innerHTML = `${modalInput.value}`
+        li.innerHTML = `${modalInput.value} <ion-icon name="trash-outline"></ion-icon>`
         todoList.appendChild(li)
         modalInput.value = ''
     } 
@@ -92,22 +95,19 @@ document.addEventListener('keydown', (event) => {
     if (event.code == 'KeyQ') {
         showModal()
     } 
-    if(event.code == 'KeyW'){
-        closeModal()
-    }
     if(event.code == 'Enter') {
         addTaskItem()
     }
     if(event.code == 'KeyM') {
         moveNavbar()
     }
-    if(event.code == 'KeyS') {
-        showSettings()
-    }
 })
 
 function showSettings() {
     settingsModal.classList.toggle('showSettings')
+    if (settingsModal.classList.contains('showSettings')) {
+        
+    }
 }
 
 function hideSettingsClose() {

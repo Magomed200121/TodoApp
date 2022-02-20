@@ -301,6 +301,11 @@ ul {
   color: #0071F7;
 }
 
+.modal {
+  position: absolute;
+  left: 50%;
+}
+
 .todo-modal {
   padding: 15px;
   margin: 0 auto;
@@ -494,6 +499,7 @@ ul {
 }
 
 .todo-dask span {
+  color: #000;
   margin-left: 5px;
 }
 
